@@ -8,7 +8,7 @@ public class Nutrients {
     private Double calories;
 
     @JsonProperty("protein")
-    private Double protien;
+    private Double protein;
 
     @JsonProperty("fat")
     private double fat;
@@ -25,11 +25,11 @@ public class Nutrients {
     }
 
     public Double getProtien() {
-        return protien;
+        return protein;
     }
 
     public void setProtien(Double protien) {
-        this.protien = protien;
+        this.protein = protien;
     }
 
     public double getFat() {

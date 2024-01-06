@@ -3,7 +3,6 @@ package com.coderscampus.benWoodardAssignment10.spoonacular.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class DayResponse {
 

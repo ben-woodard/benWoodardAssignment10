@@ -2,9 +2,6 @@ package com.coderscampus.benWoodardAssignment10.spoonacular.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.time.DayOfWeek;
-import java.util.ArrayList;
-
 public class Week {
     @JsonProperty("monday")
     private WeekDay monday;
