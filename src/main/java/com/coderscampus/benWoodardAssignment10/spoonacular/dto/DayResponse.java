@@ -2,19 +2,22 @@ package com.coderscampus.benWoodardAssignment10.spoonacular.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DayResponse {
 
-    @JsonProperty
-    private Meals meals;
+    @JsonProperty("meals")
+    private ArrayList<Meals> meals;
 
-    @JsonProperty
+    @JsonProperty("nutrients")
     private Nutrients nutrients;
 
-    public Meals getMeals() {
+    public ArrayList<Meals> getMeals() {
         return meals;
     }
 
-    public void setMeals(Meals meals) {
+    public void setMeals(ArrayList<Meals> meals) {
         this.meals = meals;
     }
 

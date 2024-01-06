@@ -1,27 +1,27 @@
 package com.coderscampus.benWoodardAssignment10.spoonacular;
 
-import org.junit.Test;
-
+import com.coderscampus.benWoodardAssignment10.spoonacular.dto.DayResponse;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 
-public class SpoonacularIntegration {
+@Service
+public class SpoonacularIntegrationService {
 
-    @Test
-    public void getDayMeals() {
+
+    public ResponseEntity<DayResponse> getDayMeals() {
         RestTemplate rt = new RestTemplate();
-
         URI dayUri = UriComponentsBuilder.fromHttpUrl("https://api.spoonacular.com/mealplanner/generate")
-                .queryParam("timeFrame", "week")
+                .queryParam("timeFrame", "day")
                 .queryParam("apiKey", "9ea1124e0a9b44ddb2bf999c4bc0ba66")
                 .build()
                 .toUri();
 
-        ResponseEntity<String> response = rt.getForEntity(dayUri, String.class);
-        System.out.println(response.getBody());
+        return rt.getForEntity(dayUri, DayResponse.class);
     }
 
 }

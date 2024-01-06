@@ -4,22 +4,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Meals {
 
-    @JsonProperty
+    @JsonProperty("id")
     private Long id;
 
-    @JsonProperty
+    @JsonProperty("imageType")
     private String imageType;
 
-    @JsonProperty
+    @JsonProperty("title")
     private String title;
 
-    @JsonProperty
-    private Integer readyInMinutes;
+    @JsonProperty("readyInMinutes")
+    private Double readyInMinutes;
 
-    @JsonProperty
-    private Integer servings;
+    @JsonProperty("servings")
+    private Double servings;
 
-    @JsonProperty
+    @JsonProperty("sourceUrl")
     private String sourceUrl;
 
     public Long getId() {
@@ -46,19 +46,19 @@ public class Meals {
         this.title = title;
     }
 
-    public Integer getReadyInMinutes() {
+    public Double getReadyInMinutes() {
         return readyInMinutes;
     }
 
-    public void setReadyInMinutes(Integer readyInMinutes) {
+    public void setReadyInMinutes(Double readyInMinutes) {
         this.readyInMinutes = readyInMinutes;
     }
 
-    public Integer getServings() {
+    public Double getServings() {
         return servings;
     }
 
-    public void setServings(Integer servings) {
+    public void setServings(Double servings) {
         this.servings = servings;
     }
 

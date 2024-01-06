@@ -4,16 +4,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Nutrients {
 
-    @JsonProperty
+    @JsonProperty("calories")
     private Double calories;
 
-    @JsonProperty
+    @JsonProperty("protein")
     private Double protien;
 
-    @JsonProperty
+    @JsonProperty("fat")
     private double fat;
 
-    @JsonProperty
+    @JsonProperty("carbohydrates")
     private double carbohydrates;
 
     public Double getCalories() {
