@@ -13,8 +13,7 @@ import java.net.URI;
 @Service
 public class SpoonacularIntegrationService {
 
-    @Test
-    public void getWeekMeals(){
+    public ResponseEntity<WeekResponse> getWeekMeals(){
         RestTemplate rt = new RestTemplate();
 
         URI weekUri = UriComponentsBuilder.fromHttpUrl("https://api.spoonacular.com/mealplanner/generate")
@@ -23,8 +22,7 @@ public class SpoonacularIntegrationService {
                 .build()
                 .toUri();
 
-        ResponseEntity<WeekResponse> response = rt.getForEntity(weekUri, WeekResponse.class);
-        System.out.println(response);
+        return rt.getForEntity(weekUri, WeekResponse.class);
     }
 
     public ResponseEntity<DayResponse> getDayMeals() {

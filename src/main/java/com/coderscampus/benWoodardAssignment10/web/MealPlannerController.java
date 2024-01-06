@@ -16,8 +16,8 @@ public class MealPlannerController {
     private SpoonacularIntegrationService spoonacular;
 
     @GetMapping("mealplanner/week")
-    public ResponseEntity<WeekResponse> getWeekMeals(@RequestParam String numCalories, @RequestParam String diet, @RequestParam String exclusions){
-        return null;
+    public ResponseEntity<WeekResponse> getWeekMeals( String numCalories,  String diet, String exclusions){
+        return spoonacular.getWeekMeals();
     }
 
     @GetMapping("mealplanner/day")
