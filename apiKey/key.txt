@@ -1,0 +1,8 @@
+9ea1124e0a9b44ddb2bf999c4bc0ba66
+
+{
+    "status": "success",
+    "username": "482225e9-b3d7-4ef5-9f61-fa684542297c",
+    "spoonacularPassword": "icedmochaon2potatoflour",
+    "hash": "b06a3c7aeeea11306d9598601b0a2ab07d4c6ae9"
+}
